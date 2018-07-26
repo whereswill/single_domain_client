@@ -26,8 +26,12 @@
   <tbody>
     <% @locations.each do |location| %>
       <tr>
-        <td><%=  link_to location.name, property_path_url(slug: location.slug) %></td>
-        <td><%= location.wow_snippet %></td>
+        <td><%= link_to location.name, property_path_url(slug: location.slug) %></td>
+        <td>
+        <% if !location.wow_snippet.blank? %>
+          <i class="glyphicon glyphicon-ok"></i>
+        <% end %>
+        </td>
         <td><%= location.phone %></td>
         <td><%= location.slug %></td>
         <td><%= link_to 'Show', location %></td>
