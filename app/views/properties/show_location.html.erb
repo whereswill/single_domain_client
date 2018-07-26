@@ -1,0 +1,22 @@
+<p id="notice"><%= notice %></p>
+
+<div class="center jumbotron">
+  <h1><%= @location.name %></h1>
+
+  <h2>
+    This is one of the locations under a single domain client
+  </h2>
+</div>
+
+<div class="row contact-info h-card vcard center">
+	<h4><%= @location.name %></h4>
+	<p>1234 Main Street</p>
+	<p>Bend, OR 97870</p>
+	<h3><%= @location.phone %></h3>
+	<p>single_domain@gmail.com</p>
+</div>
+
+<div class="row center">
+	<h4><%= link_to "Corporate Home", root_url %></h4>
+</div>
+

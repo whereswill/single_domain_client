@@ -10,13 +10,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_07_25_191442) do
+ActiveRecord::Schema.define(version: 2018_07_26_202007) do
 
   create_table "locations", force: :cascade do |t|
     t.string "name"
     t.text "wow_snippet"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "slug"
+    t.string "phone"
   end
 
 end
