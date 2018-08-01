@@ -16,6 +16,7 @@
   <thead>
     <tr>
       <th>Name</th>
+      <th>No CPM Code</th>
       <th>Wow snippet</th>
       <th>Phone</th>
       <th>Slug</th>
@@ -26,7 +27,8 @@
   <tbody>
     <% @locations.each do |location| %>
       <tr>
-        <td><%= link_to location.name, property_path_url(slug: location.slug) %></td>
+        <td><%= link_to location.name, property_path_url(slug: location.slug)+"?cpm=123" %></td>
+        <td><%= link_to "Go", property_path_url(slug: location.slug) %></td>
         <td>
         <% if !location.wow_snippet.blank? %>
           <i class="glyphicon glyphicon-ok"></i>

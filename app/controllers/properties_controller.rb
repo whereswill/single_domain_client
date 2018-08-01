@@ -1,9 +1,13 @@
 class PropertiesController < ApplicationController
-  before_action :set_location, only: [:show_location]
+  before_action :set_location, only: [:show_location, :about_location]
 
   # GET /locations/1
   # GET /locations/1.json
   def show_location
+  end
+
+  def about_location
+
   end
 
   private
