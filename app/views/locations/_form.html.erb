@@ -11,27 +11,35 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :name %>
-    <%= form.text_field :name %>
+  <div class="form-group">
+    <%= form.label :name, class: "col-md-4 control-label" %>
+    <div class="col-md-8">
+    <%= form.text_field :name, class: "form-control" %>
+    </div>
   </div>
 
-  <div class="field snippet_input">
-    <%= form.label :wow_snippet %>
-    <%= form.text_area :wow_snippet %>
+  <div class="form-group">
+    <%= form.label :wow_snippet, class: "col-md-4 control-label" %>
+    <div class="col-md-8">
+    <%= form.text_area :wow_snippet, :rows=>15, class: "form-control" %>
+    </div>
   </div>
 
-  <div class="field">
-    <%= form.label :phone %>
-    <%= form.text_field :phone %>
+  <div class="form-group">
+    <%= form.label :phone, class: "col-md-4 control-label" %>
+    <div class="col-md-8">
+    <%= form.text_field :phone, class: "form-control" %>
+    </div>
   </div>
 
-  <div class="field">
-    <%= form.label :slug %>
-    <%= form.text_area :slug %>
+  <div class="form-group">
+    <%= form.label :slug, class: "col-md-4 control-label" %>
+    <div class="col-md-8">
+    <%= form.text_area :slug, class: "form-control" %>
+    </div>
   </div>
 
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit "Submit", class: "btn btn-default btn-primary" %>
   </div>
 <% end %>
