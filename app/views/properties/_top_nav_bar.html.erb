@@ -1,5 +1,12 @@
-<ul class="nav nav-tabs">
-  <li role="presentation"><a href="<%= root_path %>">Corporate Home</a></li>
-  <li role="presentation"><a href="<%= property_path_url %>">Location Home</a></li>
-  <li role="presentation"><a href="<%= property_about_path_url %>">About</a></li>
-</ul>
+<nav class="navbar navbar-default navbar-static-top">
+  <div class="container">
+  	<ul class="nav navbar-nav">
+	  <li role="presentation"><a href="<%= root_path %>">Corporate Home</a></li>
+	  <li role="presentation"><a href="<%= property_path_url %>">Location Home</a></li>
+	  <li role="presentation"><a href="<%= property_about_path_url %>">About</a></li>
+	</ul>
+	<ul class="nav navbar-nav navbar-right">
+	  <li><h4>Call Now: <%= location.phone %></h4></li>
+    </ul>
+  </div>
+</nav>

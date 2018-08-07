@@ -14,9 +14,22 @@
   </h2>
 </div>
 
-<%= render 'address_card', location: @location %>
+<div class="row">
+	<div class="col-md-4">
+		<h3 class="center">Outbound Links</h3>
+		<ul>
+			<li><a href="https://www.google.com/">Google</a></li>
+			<li><a href="http://34.217.36.135/floorplans">Cody's Site</a></li>
+			<li><a href="http://bendplatform.com/G5/">Pete's Site</a></li>
+		</ul>
+	</div>
+	<div class="col-md-8">
+	</div>
+</div>
 
 <div class="row center">
+	<%= render 'address_card', location: @location %>
+
 	<h4><%= link_to "Corporate Home", root_url %></h4>
 </div>
 
