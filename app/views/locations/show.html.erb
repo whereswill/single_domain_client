@@ -20,5 +20,10 @@
   <%= @location.slug %>
 </p>
 
+<p>
+  <strong>Inventory JSON:</strong>
+  <%= @location.inventory_json %>
+</p>
+
 <%= link_to 'Edit', edit_location_path(@location) %> |
 <%= link_to 'Back', locations_path %>
