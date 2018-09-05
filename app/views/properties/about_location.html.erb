@@ -15,6 +15,7 @@
 </div>
 
 <div class="row">
+
 	<div class="col-md-4">
 		<h3 class="center">Outbound Links</h3>
 		<ul>
@@ -23,13 +24,23 @@
 			<li><a href="http://bendplatform.com/G5/">Pete's Site</a></li>
 		</ul>
 	</div>
-	<div class="col-md-8">
+
+	<div class="col-md-4 center">
+	    <h3>This is an iFrame:</h3>
+	    <iframe width="480" height="315" src="https://www.youtube.com/embed/WR7RlK-YvNg" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 	</div>
+
+	<div class="col-md-4 center">
+		<h3>Simple Form Submission</h3>
+		<%= form_with url: "do_test", local: true do |form| %>
+		  <%= form.text_field :amount %>
+		  <%= form.submit %>
+		<% end %>
+	</div>
+
 </div>
 
 <div class="row center">
 	<%= render 'address_card', location: @location %>
-
-	<h4><%= link_to "Corporate Home", root_url %></h4>
 </div>
 

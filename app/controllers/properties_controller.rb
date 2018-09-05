@@ -1,13 +1,20 @@
 class PropertiesController < ApplicationController
-  before_action :set_location, only: [:show_location, :about_location]
+  before_action :set_location, only: [:show_location, :about_location, :do_test]
 
   # GET /locations/1
   # GET /locations/1.json
   def show_location
+
   end
 
   def about_location
 
+  end
+
+  def do_test
+    amount = params[:amount]
+    flash[:notice] = "You owe Will #{amount}"
+    render action: "show_location"
   end
 
   private
