@@ -18,8 +18,9 @@
       <th>Name</th>
       <th>No CPM Code</th>
       <th>Wow snippet</th>
-      <th>Inventory JSON</th>
-      <th>Feed</th>
+      <th>JSON snippet</th>
+      <th>SS</th>
+      <th>MF</th>
       <th>Phone</th>
       <th>Slug</th>
       <th colspan="3"></th>
@@ -43,7 +44,12 @@
         </td>
         <td>
         <% if !location.inventory_json.blank? %>
-          <%= link_to 'Inv. Feed', property_units_path_url(slug: location.slug) %>
+          <%= link_to 'SS Feed', property_units_path_url(slug: location.slug) %>
+        <% end %>
+        </td>
+        <td>
+        <% if !location.inventory_json.blank? %>
+          <%= link_to 'MF Feed', property_floorplans_path_url(slug: location.slug) %>
         <% end %>
         </td>
         <td><%= location.phone %></td>
