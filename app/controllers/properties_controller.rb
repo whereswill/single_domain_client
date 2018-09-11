@@ -26,6 +26,5 @@ class PropertiesController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_location
       @location = Location.find_by(slug: params[:slug])
-      @print_snippet = true
     end
 end
