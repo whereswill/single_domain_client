@@ -18,8 +18,13 @@ class PropertiesController < ApplicationController
   end
 
   def storage_units
-    stuff = JSON.parse(@location.inventory_json)
-    render json: stuff
+    unless @location.inventory_json.blank?
+      stuff = JSON.parse(@location.inventory_json)
+      render json: stuff
+    else
+      head :ok
+    end
+
   end
 
   private
