@@ -62,3 +62,23 @@
   </tbody>
 </table>
 
+<div class="row center"> 
+  <div class="col-md-2"></div>   
+  <div class="col-md-8">
+    <h1>Client Snippet</h1>
+
+    <h2>
+      The one being used now:
+    </h2>
+    <p> <%= @client_snippet %> </p>
+
+    <h2>New Client Level Snippet</h2>
+    <%= form_with url: snippets_path_url, local: true do |form| %>
+      <%= form.text_area :client_snippet, :rows=>15, class: "form-control" %>
+      <br />
+      <%= form.submit :Submit, class: "btn btn-lg btn-primary" %>
+    <% end %>
+
+  </div>
+  <div class="col-md-2"></div>   
+</div>

@@ -11,4 +11,5 @@ Rails.application.routes.draw do
   # JSON feed to fake the multi family inventory feed
   get "api/v1/apartment_complexes/:slug/floorplans", to: 'properties#storage_units', as: :property_floorplans_path
 
+  post "snippet", to: 'snippets#update', as: :snippets_path
 end
