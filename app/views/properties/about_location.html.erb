@@ -15,32 +15,37 @@
 </div>
 
 <div class="row">
+	<div class="col-md-1">
+	</div>
+	<div class="col-md-7">
+		<div class="col-md-12 body-box">
+			<h3>Outbound Links</h3>
+			<p>Click these to get an <code>Outbound Link Click</code> event:</p>
+			<ul>
+				<li><a href="https://www.google.com/" target="_blank">Google</a></li>
+				<li><a href="http://34.217.36.135/floorplans" target="_blank">Cody's Site</a></li>
+				<li><a href="http://bendplatform.com/G5/" target="_blank">Pete's Site</a></li>
+			</ul>
+		</div>
 
-	<div class="col-md-4">
-		<h3 class="center">Outbound Links</h3>
-		<ul>
-			<li><a href="https://www.google.com/" target="_blank">Google</a></li>
-			<li><a href="http://34.217.36.135/floorplans" target="_blank">Cody's Site</a></li>
-			<li><a href="http://bendplatform.com/G5/" target="_blank">Pete's Site</a></li>
-		</ul>
+		<div class="col-md-12 body-box">
+		    <h3>This is an iFrame:</h3>
+			<p>Click on the video to get an <code>G5iframe</code> event:</p>
+		    <iframe width="480" height="315" src="https://www.youtube.com/embed/WR7RlK-YvNg" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+		</div>
+
+		<div class="col-md-12 body-box">
+			<h3>Simple Form Submission</h3>
+			<p>Submit a text string to get a <code>notG5form</code> event:</p>
+			<%= form_with url: "do_test", local: true do |form| %>
+			  <%= form.text_field :amount %>
+			  <%= form.submit %>
+			<% end %>
+		</div>
 	</div>
 
-	<div class="col-md-4 center">
-	    <h3>This is an iFrame:</h3>
-	    <iframe width="480" height="315" src="https://www.youtube.com/embed/WR7RlK-YvNg" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-	</div>
-
-	<div class="col-md-4 center">
-		<h3>Simple Form Submission</h3>
-		<%= form_with url: "do_test", local: true do |form| %>
-		  <%= form.text_field :amount %>
-		  <%= form.submit %>
-		<% end %>
-	</div>
-
-</div>
-
-<div class="row center">
+	<div class="col-md-3 sidebar">
 	<%= render 'address_card', location: @location %>
+	</div>
 </div>
 
