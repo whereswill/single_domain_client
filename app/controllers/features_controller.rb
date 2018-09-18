@@ -26,6 +26,7 @@ class FeaturesController < ApplicationController
   def create
     @feature = Feature.new(feature_params)
 
+
     respond_to do |format|
       if @feature.save
         format.html { redirect_to @feature, notice: 'Feature was successfully created.' }
