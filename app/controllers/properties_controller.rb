@@ -1,5 +1,5 @@
 class PropertiesController < ApplicationController
-  before_action :set_location, only: [:show_location, :about_location, :do_test, :storage_units]
+  before_action :set_location, only: [:show_location, :about_location, :features_location, :do_test, :storage_units]
 
   # GET /locations/1
   # GET /locations/1.json
@@ -8,6 +8,10 @@ class PropertiesController < ApplicationController
   end
 
   def about_location
+
+  end
+
+  def features_location
 
   end
 

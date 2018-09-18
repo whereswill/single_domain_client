@@ -1,0 +1,12 @@
+# confirm file called
+console.log("create.js.erb file");
+// console.log("<%= @feature.name %>")
+ 
+# add new feature to end of features section
+$("#features ul").append("<li><%=  @feature.name %></li>");
+ 
+# remove current DOM element stating there are no features yet (if no features yet exist)
+// $("#features h4").html(""); 
+ 
+# replace feature form so user can only comment once (if desirable)
+// $(".feature_form").html("<h1>You have commented on this post</h1>");

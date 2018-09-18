@@ -1,0 +1,38 @@
+<%= form_with(model: feature, local: true) do |form| %>
+  <% if feature.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(feature.errors.count, "error") %> prohibited this feature from being saved:</h2>
+
+      <ul>
+      <% feature.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :location_id %>
+    <%= form.text_field :location_id %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
+
+<%= form_for [@post, Comment.new], :remote => true do |f| %>
+  <div class="field">
+    <%= f.text_area :content, class: "form-control col-lg-8", placeholder: "Provide comment here." %>
+    <%= f.hidden_field :post_id, :value => @post.id %>
+    <%= f.hidden_field :user_id, :value => current_user.id %>
+  </div>
+  <div class="actions">
+    <%= f.submit "Leave Comment" %>
+  </div>
+<% end %>

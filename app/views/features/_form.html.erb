@@ -1,0 +1,9 @@
+<%= form_for [@location, Feature.new], :remote => true do |f| %>
+  <div class="field">
+    <%= f.text_area :name, class: "form-control col-lg-8", placeholder: "Provide feature here." %>
+    <%= f.hidden_field :location_id, :value => @location.id %>
+  </div>
+  <div class="actions">
+    <%= f.submit "Save Feature" %>
+  </div>
+<% end %>
