@@ -21,7 +21,8 @@
 			<% else %>
 				<ul>
 					<% @location.features.each do |p| %>
-					  <li><%= p.name %></li>
+					  <li id="feature_<%= p.id %>"><%= p.name %>  <%= link_to p, method: :delete, data: { confirm: 'Are you sure?' }, :remote => true, :class => 'delete_feature' do %><i class="glyphicon glyphicon-trash"></i>
+    <% end %></li>
 					<% end %>
 				</ul>
 			<% end %>
