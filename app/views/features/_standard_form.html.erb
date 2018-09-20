@@ -1,0 +1,9 @@
+<%= form_with model: [ @location, Feature.new ], local: true do |f| %>
+  <div class="field">
+    <%= f.text_area :name, class: "form-control col-lg-8", placeholder: "Submit feature here." %>
+    <%= f.hidden_field :location_id, :value => @location.id %>
+  </div>
+  <div class="actions">
+    <%= f.submit :Submit, class: "btn btn-lg btn-primary" %>
+  </div>
+<% end %>

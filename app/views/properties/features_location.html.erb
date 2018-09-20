@@ -34,6 +34,12 @@
 			<%= render 'features/form', review: Feature.new(location_id: @location.id) %>
 		</div>
 
+		<div class="col-md-12 body-box">
+			<h3>Thank you page Form Submission</h3>
+			<p>Submit a feature here to get an <code>Thank You Page</code> event:</p>
+			<%= render 'features/standard_form', review: Feature.new(location_id: @location.id) %>
+		</div>
+
 	</div>
 
 	<div class="col-md-3 sidebar">
@@ -42,3 +48,4 @@
 </div>
 
 
+	

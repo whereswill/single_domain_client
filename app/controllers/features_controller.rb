@@ -1,5 +1,5 @@
 class FeaturesController < ApplicationController
-  before_action :set_feature, only: [:show, :edit, :update, :destroy]
+  before_action :set_feature, only: [:show, :thank_you, :edit, :update, :destroy]
 
   # GET /features
   # GET /features.json
@@ -10,6 +10,9 @@ class FeaturesController < ApplicationController
   # GET /features/1
   # GET /features/1.json
   def show
+  end
+
+  def thank_you
   end
 
   # GET /features/new
@@ -26,10 +29,10 @@ class FeaturesController < ApplicationController
   def create
     @feature = Feature.new(feature_params)
 
-
     respond_to do |format|
       if @feature.save
-        format.html { redirect_to @feature, notice: 'Feature was successfully created.' }
+        format.html { redirect_to thank_you_feature_path(@feature), notice: 'Thank you for submitting this Feature.' }
+        # format.html { redirect_to @feature, notice: 'Feature was successfully created.' }
         format.js   { }
         format.json { render :show, status: :created, location: @feature }
       else

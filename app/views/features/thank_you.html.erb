@@ -1,0 +1,13 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @feature.name %>
+</p>
+
+<p>
+  <strong>Location:</strong>
+  <%= @feature.location %>
+</p>
+
+<%= link_to 'Back to Features', location_features_path(@feature.location.slug) %>

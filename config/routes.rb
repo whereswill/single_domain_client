@@ -1,5 +1,10 @@
 Rails.application.routes.draw do
-  resources :features
+  resources :features do
+    member do
+      get :thank_you
+    end
+  end
+
   root 'locations#index'
   resources :locations
 
