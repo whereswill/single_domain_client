@@ -17,7 +17,7 @@ class PropertiesController < ApplicationController
 
   def do_test
     amount = params[:amount]
-    flash[:notice] = "You owe Will #{amount}"
+    flash[:notice] = "Thank you for submitting the word #{amount}"
     render action: "show_location"
   end
 
