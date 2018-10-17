@@ -8,6 +8,8 @@ Rails.application.routes.draw do
   root 'locations#index'
   resources :locations
 
+  get "sitemap", to: 'locations#sitemap'
+
   get "property/:slug", to: 'properties#show_location', as: :property_path
   get "property/:slug/about", to: 'properties#about_location', as: :property_about_path
   get "property/:slug/features", to: 'properties#features_location', as: :location_features

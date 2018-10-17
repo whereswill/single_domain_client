@@ -37,7 +37,7 @@
 			<p>Submit a text string to get a <code>notG5form</code> event:</p>
 			<%= form_with url: "do_test", local: true do |form| %>
 			  <%= form.text_field :amount %>
-			  <%= form.submit %>
+			  <%= form.submit :Submit, class: "btn btn-default btn-primary" %>
 			<% end %>
 		</div>
 	</div>
