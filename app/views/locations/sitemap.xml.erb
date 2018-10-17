@@ -1,25 +1,19 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <% @locations.each do |location| %>
 	<url>
-		<loc>
-			<%= url_for property_path_url(slug: location.slug) %>
-		</loc>
+		<loc><%= url_for property_path_url(slug: location.slug) %></loc>
 		<lastmod>2018-09-21</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.9</priority>
 	</url>
 	<url>
-		<loc>
-			<%= url_for property_about_path_url(slug: location.slug) %>
-		</loc>
+		<loc><%= url_for property_about_path_url(slug: location.slug) %></loc>
 		<lastmod>2018-09-21</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.7</priority>
 	</url>
 	<url>
-		<loc>
-			<%= url_for location_features_url(slug: location.slug) %>
-		</loc>
+		<loc><%= url_for location_features_url(slug: location.slug) %></loc>
 		<lastmod>2018-09-21</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.7</priority>
