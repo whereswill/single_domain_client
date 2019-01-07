@@ -12,6 +12,7 @@ Rails.application.routes.draw do
 
   get "property/:slug", to: 'properties#show_location', as: :property_path
   get "property/:slug/about", to: 'properties#about_location', as: :property_about_path
+  get "property/:slug/gallery", to: 'properties#gallery_location', as: :property_gallery_path
   get "property/:slug/features", to: 'properties#features_location', as: :location_features
   post "property/:slug/do_test", to: 'properties#do_test'
   post "property/:slug/features", to: 'features#create'

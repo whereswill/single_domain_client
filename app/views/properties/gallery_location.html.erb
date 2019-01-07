@@ -1,0 +1,31 @@
+
+<%= render 'top_nav_bar', location: @location %>
+
+<div class="center jumbotron">
+  <h1>Gallery for <%= @location.name %></h1>
+
+  <h2>
+    This is the Gallery page for <%= @location.name %>
+  </h2>
+</div>
+
+<div class="row">
+	<div class="col-md-1">
+	</div>
+
+	<div class="col-md-7">
+		<div class="col-md-12 body-box" id="gallery">
+			<h3>Gallery</h3>
+			<img src="https://hgtvhome.sndimg.com/content/dam/images/hgtv/fullset/2016/10/13/2/dh_2017_master-bedroom-01-room-wide-angle_h.jpg.rend.hgtvcom.966.725.suffix/1476401242902.jpeg" alt="Image A" />
+			<img src="https://img1.coastalliving.timeinc.net/sites/default/files/styles/4_3_horizontal_inbody_900x506/public/image/2016/10/main/bedroom.jpg?itok=wU1RsrhL" alt="Image B" />
+			<img src="https://hips.hearstapps.com/edc.h-cdn.co/assets/cm/15/04/54bf768ad0748_-_patmoshome04.jpg" alt="Image C" />
+			<img src="https://www.mirashowers.co.uk/media/2957/web_mira-showers-medium-contemporary-bathroom-roomset-04.jpg" alt="Image A" />
+			<img src="https://images.pexels.com/photos/584399/living-room-couch-interior-room-584399.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=600" alt="Image B" />
+			<img src="https://hgtvhome.sndimg.com/content/dam/images/hgrm/fullset/2013/9/20/0/CI-Room-and-Board-contemporary-living-room_s4x3.jpg.rend.hgtvcom.1280.960.suffix/1405499250648.jpeg" alt="Image C" />		
+		</div>
+	</div>
+
+	<div class="col-md-3 sidebar">
+		<%= render 'address_card', location: @location %>
+	</div>
+</div>
