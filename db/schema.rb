@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_10_18_222154) do
+ActiveRecord::Schema.define(version: 2019_01_30_183341) do
 
   create_table "features", force: :cascade do |t|
     t.string "name"
@@ -34,6 +34,12 @@ ActiveRecord::Schema.define(version: 2018_10_18_222154) do
 
   create_table "snippets", force: :cascade do |t|
     t.text "client_snippet"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "static_feeds", force: :cascade do |t|
+    t.text "static_feed"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

@@ -9,7 +9,10 @@
 </div>
 
 <h1>Locations</h1>
-<%= link_to "Sitemap", sitemap_path(format: :xml) %>
+<%= link_to "Sitemap", sitemap_path(format: :xml) %> |
+
+<%= link_to "Edit Static Feed", static_feeds_path %> |
+<%= link_to "View Static Feed", static_locations_feed_path_url(format: :xml) %>
 
 <table class="table table-striped">
   <thead>

@@ -1,5 +1,11 @@
 <p id="notice"><%= notice %></p>
 
+
+
+<%= link_to 'Edit', edit_location_path(@location) %> |
+<%= link_to 'Back', locations_path %> |
+<%= link_to 'MF Feed', property_floorplans_path_url(slug: @location.slug) %>
+
 <p>
   <strong>Name:</strong>
   <%= @location.name %>
@@ -36,4 +42,5 @@
 </p>
 
 <%= link_to 'Edit', edit_location_path(@location) %> |
-<%= link_to 'Back', locations_path %>
+<%= link_to 'Back', locations_path %> |
+<%= link_to 'MF Feed', property_floorplans_path_url(slug: @location.slug) %>

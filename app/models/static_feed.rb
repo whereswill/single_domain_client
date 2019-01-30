@@ -1,0 +1,2 @@
+class StaticFeed < ApplicationRecord
+end
