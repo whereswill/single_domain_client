@@ -65,6 +65,18 @@ class LocationsController < ApplicationController
     @locations = Location.all
   end
 
+  def statfeed
+    if !params[:filter][:urn].blank?
+      location = Location.where(slug: params[:filter][:urn]).first
+      stuff = JSON.parse(location.statfeed)
+      render json: stuff
+    elsif !StaticFeed.first.blank?
+      @static_feed = StaticFeed.first
+      stuff = JSON.parse(@static_feed.static_feed)
+      render json: stuff
+    end
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_location
@@ -73,6 +85,6 @@ class LocationsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def location_params
-      params.require(:location).permit(:name, :wow_snippet, :text_snippet, :iframe_source, :phone, :slug, :inventory_json)
+      params.require(:location).permit(:name, :wow_snippet, :text_snippet, :iframe_source, :phone, :slug, :inventory_json, :statfeed)
     end
 end

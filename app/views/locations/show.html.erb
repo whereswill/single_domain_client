@@ -41,6 +41,11 @@
   <%= @location.inventory_json %>
 </p>
 
+<p>
+  <strong>Static Feed JSON:</strong>
+  <%= @location.statfeed %>
+</p>
+
 <%= link_to 'Edit', edit_location_path(@location) %> |
 <%= link_to 'Back', locations_path %> |
 <%= link_to 'MF Feed', property_floorplans_path_url(slug: @location.slug) %>
