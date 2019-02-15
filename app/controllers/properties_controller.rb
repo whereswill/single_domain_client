@@ -26,11 +26,13 @@ class PropertiesController < ApplicationController
   end
 
   def storage_units
-    unless @location.inventory_json.blank?
+    unless @location.nil? || @location.inventory_json.blank?
       stuff = JSON.parse(@location.inventory_json)
       render json: stuff
     else
-      head :ok
+      respond_to do |format|
+        format.html { render :file => "#{Rails.root}/public/location_404", :layout => false, :status => :not_found }
+      end
     end
 
   end
