@@ -11,8 +11,8 @@
 <h1>Locations</h1>
 <%= link_to "Sitemap", sitemap_path(format: :xml) %> |
 
-<%= link_to "Edit All Static Feed", static_feeds_path %> |
-<%= link_to "View All Static Feed", '/api/v2/locations?fields[locations]=urn&filter[static_inventory]=true' %>
+<%= link_to "Edit Static Feed", static_feeds_path %> |
+<%= link_to "View Static Feed", static_locations_feed_path_url(format: :xml) %>
 
 <table class="table table-striped">
   <thead>
@@ -23,10 +23,9 @@
       <th>JSON snippet</th>
       <th>SS</th>
       <th>MF</th>
-      <th>Static</th>
+      <th>Phone</th>
       <th>Slug</th>
       <th colspan="3"></th>
-      <th>Phone</th>
     </tr>
   </thead>
 
@@ -47,17 +46,12 @@
         </td>
         <td>
         <% if !location.inventory_json.blank? %>
-          <%= link_to 'SS', property_units_path_url(slug: location.slug) %>
+          <%= link_to 'SS Feed', property_units_path_url(slug: location.slug) %>
         <% end %>
         </td>
         <td>
         <% if !location.inventory_json.blank? %>
-          <%= link_to 'MF', property_floorplans_path_url(slug: location.slug) %>
-        <% end %>
-        </td>
-        <td>
-        <% if !location.statfeed.blank? %>
-          <%= link_to 'SF', '/api/v2/locations?fields[locations]=urn&filter[static_inventory]=true&filter[urn]='+location.slug %>
+          <%= link_to 'MF Feed', property_floorplans_path_url(slug: location.slug) %>
         <% end %>
         </td>
         <td><%= location.phone %></td>

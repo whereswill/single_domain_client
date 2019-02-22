@@ -24,7 +24,7 @@ Rails.application.routes.draw do
   get "api/v1/apartment_complexes/:slug/floorplans", to: 'properties#storage_units', as: :property_floorplans_path
 
   # JSON feed to fake the search for static inventory locations
-  get "api/v2/locations", to: 'locations#statfeed', as: :static_locations_feed
+  get "api/v2/locations", to: 'static_feeds#locations', as: :static_locations_feed_path
 
   post "snippet", to: 'snippets#update', as: :snippets_path
 end
