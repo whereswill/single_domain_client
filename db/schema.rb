@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_01_30_183341) do
+ActiveRecord::Schema.define(version: 2019_01_31_204528) do
 
   create_table "features", force: :cascade do |t|
     t.string "name"
@@ -30,6 +30,7 @@ ActiveRecord::Schema.define(version: 2019_01_30_183341) do
     t.text "inventory_json"
     t.text "text_snippet"
     t.string "iframe_source"
+    t.text "statfeed"
   end
 
   create_table "snippets", force: :cascade do |t|
