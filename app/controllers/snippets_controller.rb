@@ -19,7 +19,8 @@ class SnippetsController < ApplicationController
   def update
     @snippet.client_snippet = params[:client_snippet]
     if @snippet.save
-        redirect_to root_url, flash[:notice] = 'Snippet was successfully created.'
+        flash[:notice] = 'Snippet was successfully created.'
+        redirect_to root_url
       else
         format.html { render :new }
         format.json { render json: @snippet.errors, status: :unprocessable_entity }
