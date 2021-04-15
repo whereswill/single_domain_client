@@ -35,7 +35,7 @@
       <tr>
         <td><%= link_to location.name, property_path_url(slug: location.slug)+"?cpm=123" %></td>
         <td><%= link_to "Go", property_path_url(slug: location.slug) %></td>
-        <td><%= link_to "Go", "https://jsrx-content-staging.g5devops.com/script_config/#{location.slug}/g5.js", :target => "_blank" %></td>
+        <td><%= link_to "Go", "https://jsrx-content-staging.g5devops.com/script_config/#{location.urn}/g5.js", :target => "_blank" %></td>
         <td>
         <% if !location.wow_snippet.blank? %>
           <i class="glyphicon glyphicon-ok"></i>
