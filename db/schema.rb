@@ -12,9 +12,12 @@
 
 ActiveRecord::Schema.define(version: 2021_04_14_235720) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "features", force: :cascade do |t|
     t.string "name"
-    t.integer "location_id"
+    t.bigint "location_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["location_id"], name: "index_features_on_location_id"
