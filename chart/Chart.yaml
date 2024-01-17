@@ -1,0 +1,13 @@
+apiVersion: v2
+appVersion: "1.0"
+name: off-platform-test-site
+version: 0.0.1
+description: off-platform-test-site
+home: https://www.g5devops.com/
+icon: https://dalton.g5marketingcloud.com/assets/dalton-logo-06cd10f3787f9e8611772a2d29005dd9d9ff28103d627629aa21fe4989370dc9.jpg 
+sources:
+  - https://github.com/whereswill/single_domain_client.git
+dependencies:
+  - name: ruby-web-service
+    version: "2.1.20"
+    repository: "@g5-multiverse-helm3-repositories"

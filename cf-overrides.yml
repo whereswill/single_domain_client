@@ -1,0 +1,7 @@
+BaseImageTag: "2.7-v1.0.4"
+AdditionalPoolConnectionsCount: 3
+CIPlan: "g5search/ci-plan-rails:v1.2.6"
+DisableYarn: true
+TestEnvironment:
+  - INTERNET_FACING_HOSTNAME=localhost
+TestPostgresImageTag: "15"

@@ -1,0 +1,28 @@
+global:
+  applicationName: "off-platform-test-site"
+  region: us-central1
+ruby-web-service:
+  sidekiq:
+    enabled: false
+  cloud-sql:
+    enabled: false
+  image:
+    name: "gcr.io/g5-images/off-platform-test-site"
+  isInternetFacing: true
+  hasMetrics: true
+  configurations:
+    prime:
+      configMapData:
+    production:
+      configMapData:
+    staging:
+      configMapData:
+  honeybadgerAPIKey: "hbp_cWJZ2zHg1r40qmnov4FUW1DkbRiE9L0gCMnn"
+  rails:
+    resources:
+     requests:
+       memory: "512Mi"
+       cpu: "500m"
+     limits:
+       memory: "768Mi"
+       cpu: "1000m"

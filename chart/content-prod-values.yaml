@@ -1,0 +1,5 @@
+global:
+  isProduction: true
+ruby-web-service:
+  configuration: production
+  environment: production
