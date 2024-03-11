@@ -1,0 +1,6 @@
+dependencies:
+- name: ruby-web-service
+  repository: gs://g5-multiverse-helm3-repositories
+  version: 2.1.20
+digest: sha256:7f949f2fdcb9a5c814ef7ce081223f61c9bb454c03d369164e3fb971bd1536d6
+generated: "2024-01-16T16:19:47.712749173-08:00"
